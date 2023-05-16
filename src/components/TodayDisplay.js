@@ -1,4 +1,4 @@
-const TodayDisplay = () => {
+const TodayDisplay = ({today, location}) => {
     return (
         <div className="today-container">
             <div className="info-container">
