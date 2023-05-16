@@ -1,6 +1,9 @@
 const Card = () => {
     return (
-        <div>I am a Card.</div>
+        <div className="card-container">
+            <p>I am a Card</p>
+            <p>XXX</p>
+        </div>
     )
 }
 
