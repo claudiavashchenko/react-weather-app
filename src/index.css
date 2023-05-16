@@ -20,9 +20,23 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.card-container {
+.weather-app .card-container {
   width: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.weather-app .today-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.weather-app .unit-container {
+  margin: 20px 10px 0 10px;
+}
+.weather-app .unit-container button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 20px 5px 0 5px;
 }
