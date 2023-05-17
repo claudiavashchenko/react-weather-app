@@ -28,7 +28,7 @@ const App = () => {
   const fetchData = () => {
     const latitude = location?.latitude
     const longitude = location?.longitude
-    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civil&output=json`)
+    fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
     .then(response => response.json())
     .then(json => setData(json))
     .catch (err => console.error(err))
@@ -46,7 +46,7 @@ const App = () => {
     <div className="weather-app">
         <TodayDisplay today={data?.dataseries[0]} location={location} />
       <div className="cards-container">
-      {data?.dataseries.slice(0,8).map((day, index) => (
+      {data?.dataseries.map((day, index) => (
         <Card key={index} day={day} />
       ))}
       </div>
