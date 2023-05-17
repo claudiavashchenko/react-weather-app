@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TodayDisplay from "./components/TodayDisplay";
 import Card from "./components/Card";
 import UnitContainer from "./components/UnitContainer";
+import "@fortawesome/fontawesome-free/js/all.js";
 const App = () => {
 
   const [location, setLocation] = useState(null)
