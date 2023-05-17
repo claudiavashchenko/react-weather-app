@@ -36,4 +36,28 @@ const getIcon = (weatherType) => {
     return weatherStyle
 }
 
-export { getIcon }
+const converToFahrenheit = ( celcius ) => {
+   return (celcius * 9/5) + 32
+}
+
+const convertToKelvin = ( celcius ) => {
+    return celcius + 273.15
+}
+
+const convertUnit = (unit, currentTemp) => {
+    let temp
+    switch(unit) {
+        case "celcius":
+            temp = currentTemp
+            break
+        case "fahrenheit":
+            temp = converToFahrenheit(currentTemp)
+            break
+        case "kelvin":
+            temp = convertToKelvin(currentTemp)
+            break
+    }
+    return temp
+} 
+
+export { getIcon, convertUnit }
