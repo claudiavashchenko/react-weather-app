@@ -1,4 +1,4 @@
-const Card = () => {
+const Card = ({ day }) => {
     return (
         <div className="card-container">
             <p>I am a Card</p>

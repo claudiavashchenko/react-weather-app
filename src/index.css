@@ -40,3 +40,10 @@ body {
   font-size: 20px;
   padding: 20px 5px 0 5px;
 }
+.weather-app .today-container svg {
+  transform: scale(7);
+  margin: 40px 40px 0 0;
+}
+.weather-app .today-container svg path {
+  fill: rgb(253, 245, 131);
+}

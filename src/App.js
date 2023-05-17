@@ -46,14 +46,9 @@ const App = () => {
     <div className="weather-app">
         <TodayDisplay today={data?.dataseries[0]} location={location} />
       <div className="cards-container">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {data?.dataseries.slice(0,8).map((day, index) => (
+        <Card key={index} day={day} />
+      ))}
       </div>
         <UnitContainer />
         {error}
