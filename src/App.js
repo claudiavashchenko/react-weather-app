@@ -47,7 +47,7 @@ const App = () => {
         <TodayDisplay today={data?.dataseries[0]} location={location} />
       <div className="cards-container">
       {data?.dataseries.map((day, index) => (
-        <Card key={index} day={day} />
+        <Card key={index} day={day} index={index} />
       ))}
       </div>
         <UnitContainer />

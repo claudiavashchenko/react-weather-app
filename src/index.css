@@ -47,3 +47,11 @@ body {
 .weather-app .today-container svg path {
   fill: rgb(253, 245, 131);
 }
+.icon-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+.weather-app p {
+  margin: 10px;
+}
