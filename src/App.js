@@ -55,7 +55,7 @@ const App = () => {
         <Card key={index} day={day} index={index} unit={unit} />
       ))}
       </div>
-        <UnitContainer handleClick={handleClick} />
+        <UnitContainer handleClick={handleClick} unit={unit} />
         {error}
     </div>
   );

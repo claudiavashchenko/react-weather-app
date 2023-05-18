@@ -21,10 +21,11 @@ body {
   justify-content: space-between;
 }
 .weather-app .card-container {
-  width: 40px;
+  width: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .weather-app .today-container {
   display: flex;
@@ -54,4 +55,7 @@ body {
 }
 .weather-app p {
   margin: 10px;
+}
+.greyed {
+  color: rgb(255, 255, 255);
 }
