@@ -56,6 +56,8 @@ const convertUnit = (unit, currentTemp) => {
         case "kelvin":
             temp = convertToKelvin(currentTemp)
             break
+            default:
+                temp = currentTemp
     }
     return temp
 } 

@@ -40,7 +40,7 @@ const App = () => {
   useEffect(() => {
      getLocation()
      fetchData()
-  }, [])
+  },)
 
   const handleClick = (e) => {
     setUnit(e.target.id)
