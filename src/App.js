@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import TodayDisplay from "./components/TodayDisplay";
 import Card from "./components/Card";
 import UnitContainer from "./components/UnitContainer";
@@ -26,21 +26,21 @@ const App = () => {
 }
  
 
-  const fetchData = useCallback(() => {
+  const fetchData = () => {
     const latitude = location?.latitude
     const longitude = location?.longitude
     fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
     .then(response => response.json())
     .then(json => setData(json))
     .catch (err => console.error(err))
-  }, [location])
+  }
 
   
 
   useEffect(() => {
      getLocation()
      fetchData()
-  }, [location, fetchData])
+  })
 
   const handleClick = (e) => {
     setUnit(e.target.id)
