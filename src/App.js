@@ -24,29 +24,22 @@ const App = () => {
     }
 
 }
- 
 
+const fetchData = (location) => {
+  const latitude = location?.latitude
+  const longitude = location?.longitude
+  fetch(`http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`)
+  .then(response => response.json())
+  .then(json => setData(json))
+  .catch (err => console.error(err))
+}
+ 
   useEffect(() => {
     getLocation()
+    fetchData()
   }, [])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { latitude, longitude } = location || {}
-        const response = await fetch(
-          `http://www.7timer.info/bin/api.pl?lon=${longitude}&lat=${latitude}&product=civillight&output=json`
-        )
-        const json = await response.json()
-        setData(json)
-      } catch (err) {
-        console.error(err)
-      }
-    }
-    if (location) {
-      fetchData()
-    }
-  }, [location])
+  
 
   const handleClick = (e) => {
     setUnit(e.target.id)
